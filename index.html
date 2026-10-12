@@ -20,9 +20,15 @@
     </div>
 
     <script>
-        document.addEventListener('keydown', function(){
-            window.location.href = 'main.html'
-        })
+        document.addEventListener('DOMContentLoaded', function() {
+
+    function goToMain() {
+        window.location.href = 'main.html';
+    }
+    document.addEventListener('keydown', goToMain);
+
+    document.addEventListener('touchend', goToMain);
+});
     </script>
 
 </body>
