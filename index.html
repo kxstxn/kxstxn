@@ -6,29 +6,36 @@
     <title>Welcome</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-i18n-title="title.welcome">
 
-    <div class="welcome-text">
-        <p style="--delay: 1">[+] Initializing onion routing circuit...</p>
-        <p style="--delay: 2">[+] Establishing connection to entry node: 176.10.104.240 (Switzerland)</p>
-        <p style="--delay: 3">[+] Routing encrypted tunnel via middle node: 185.220.101.5 (Germany)</p>
-        <p style="--delay: 4">[+] Opening exit node: 109.70.100.34 (Austria)</p>
-        <p style="--delay: 5">[+] Handshake complete. Connection encrypted via AES-256-GCM.</p>
-        <p style="--delay: 6">[+] Resolving hidden service directory... SUCCESS.</p>
-        <p style="--delay: 7">[!] WARNING: Destination node requires end-to-end payload decryption.</p>
-        <p style="--delay: 9">[*] PRESS ANY KEY TO CONTINUE :3</p>
+    <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="ru">RU</button>
     </div>
 
+    <div class="welcome-text">
+        <p style="--delay: 1" data-i18n="index.1">[+] Initializing onion routing circuit...</p>
+        <p style="--delay: 2" data-i18n="index.2">[+] Establishing connection to entry node: 176.10.104.240 (Switzerland)</p>
+        <p style="--delay: 3" data-i18n="index.3">[+] Routing encrypted tunnel via middle node: 185.220.101.5 (Germany)</p>
+        <p style="--delay: 4" data-i18n="index.4">[+] Opening exit node: 109.70.100.34 (Austria)</p>
+        <p style="--delay: 5" data-i18n="index.5">[+] Handshake complete. Connection encrypted via AES-256-GCM.</p>
+        <p style="--delay: 6" data-i18n="index.6">[+] Resolving hidden service directory... SUCCESS.</p>
+        <p style="--delay: 7" data-i18n="index.7">[!] WARNING: Destination node requires end-to-end payload decryption.</p>
+        <p style="--delay: 9" data-i18n="index.8">[*] PRESS ANY KEY TO CONTINUE :3</p>
+    </div>
+
+    <script src="i18n.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-
-    function goToMain() {
-        window.location.href = 'main.html';
-    }
-    document.addEventListener('keydown', goToMain);
-
-    document.addEventListener('touchend', goToMain);
-});
+            function goToMain() {
+                window.location.href = 'main.html';
+            }
+            document.addEventListener('keydown', goToMain);
+            document.addEventListener('touchend', function (e) {
+                if (e.target.closest('.lang-btn')) return;
+                goToMain();
+            });
+        });
     </script>
 
 </body>

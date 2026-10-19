@@ -3,19 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>About — kxstxn</title>
+    <link rel="stylesheet" href="background.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-i18n-title="title.about">
+<div class="container">
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+</div>
 
     <div class="navbar">
-        <a href="services.html">Services</a>
-        <a href="tools.html">Tools</a>
-        <a href="projects.html">Projects</a>
-        <a href="about.html">About</a>
+        <a href="main.html" data-i18n="nav.home">Home</a>
+        <a href="services.html" data-i18n="nav.services">Services</a>
+        <a href="tools.html" data-i18n="nav.tools">Tools</a>
+        <a href="projects.html" data-i18n="nav.projects">Projects</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" class="lang-btn" data-lang="en">EN</button>
+            <button type="button" class="lang-btn" data-lang="ru">RU</button>
+        </div>
     </div>
 
-    <p id = 'soon'>Soon...</p>
-    
+    <main class="page profile">
+        <section class="glass profile-hero">
+            <div class="profile-body">
+                <img
+                    class="profile-avatar"
+                    src="https://avatars.githubusercontent.com/u/277845726?v=4"
+                    alt="kxstxn avatar"
+                    width="88"
+                    height="88"
+                >
+
+                <div class="profile-top">
+                    <div class="profile-identity">
+                        <h1 class="profile-name">kxstxn</h1>
+                        <span class="profile-handle" data-i18n="about.handle">@kxstxn · developer</span>
+                        <span class="profile-status">
+                            <span class="profile-status-dot" aria-hidden="true"></span>
+                            <span data-i18n="about.status">sites &amp; Python scripts</span>
+                        </span>
+                    </div>
+                    <div class="profile-actions">
+                        <a class="profile-btn" href="https://t.me/kxstxn" data-i18n="main.telegram">Telegram</a>
+                        <a class="profile-btn ghost" href="https://github.com/kxstxn" data-i18n="main.github">GitHub</a>
+                    </div>
+                </div>
+
+                <p class="profile-bio" data-i18n-html="about.bio">
+                    I make websites and write Python scripts.
+                    Mostly small things: pages, helpers, automation for myself and others.
+                    If something can be done with a script — I usually try that first.
+                </p>
+
+                <div class="profile-meta">
+                    <span data-i18n="about.meta.1">HTML / CSS / JS</span>
+                    <span data-i18n="about.meta.2">Python</span>
+                    <span data-i18n="about.meta.3">Linux</span>
+                    <span data-i18n="about.meta.4">kostin.space</span>
+                </div>
+            </div>
+        </section>
+
+
+        <ul class="cards two-col">
+            <li class="glass card">
+                <span class="card-title" data-i18n="about.stack">What I use</span>
+                <ul class="tags">
+                    <li class="tag">Python</li>
+                    <li class="tag">HTML / CSS</li>
+                    <li class="tag">JavaScript</li>
+                    <li class="tag">Git</li>
+                    <li class="tag">Linux</li>
+                </ul>
+            </li>
+            <li class="glass card">
+                <span class="card-title" data-i18n="about.focus">What I do</span>
+                <ul class="card-list">
+                    <li data-i18n="about.focus.1">Simple websites and landing pages</li>
+                    <li data-i18n="about.focus.2">Python scripts for boring tasks</li>
+                    <li data-i18n="about.focus.3">Small Telegram bots when needed</li>
+                    <li data-i18n="about.focus.4">Fixing things that broke</li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="cards">
+            <li class="glass card">
+                <span class="card-title" data-i18n="about.how">Basically</span>
+                <p class="card-text" data-i18n="about.how.text">
+                    I like clear code and short feedback loops.
+                    Not chasing perfect architecture — just something that works and isn't painful to open later.
+                </p>
+            </li>
+            <li class="glass card">
+                <span class="card-title" data-i18n="about.ask">Contact</span>
+                <p class="card-text" data-i18n-html="about.contact.text">
+                    Write on <a class="link" href="https://t.me/kxstxn">Telegram</a>
+                    or check <a class="link" href="https://github.com/kxstxn">GitHub</a>.
+                </p>
+            </li>
+        </ul>
+    </main>
+
+<script src="i18n.js"></script>
 </body>
 </html>

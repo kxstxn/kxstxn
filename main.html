@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <title>kxstxn :3</title>
 </head>
-<body>
+<body data-i18n-title="title.main">
 <div class="container">
   <div id="stars"></div>
   <div id="stars2"></div>
@@ -16,11 +16,15 @@
 </div>
 
     <div class="navbar">
-        <a href="services.html">Services</a>
-        <a href="tools.html">Tools</a>
-        <a href="projects.html">Projects</a>
-        <a href="about.html">About</a>
-    </div>    
+        <a href="services.html" data-i18n="nav.services">Services</a>
+        <a href="tools.html" data-i18n="nav.tools">Tools</a>
+        <a href="projects.html" data-i18n="nav.projects">Projects</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" class="lang-btn" data-lang="en">EN</button>
+            <button type="button" class="lang-btn" data-lang="ru">RU</button>
+        </div>
+    </div>
 <div id="hero-main">
     <pre id="ascii-logo">██╗  ██╗██╗  ██╗███████╗████████╗██╗  ██╗███╗   ██╗
 ██║ ██╔╝╚██╗██╔╝██╔════╝╚══██╔══╝╚██╗██╔╝████╗  ██║
@@ -29,14 +33,15 @@
 ██║  ██╗██╔╝ ██╗███████║   ██║   ██╔╝ ██╗██║ ╚████║
 ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝</pre>
 
-<p class = 'text'>Ctrl+C, Ctrl+V, then magic happens.</p>
+<p class="text" data-i18n="main.tagline">Ctrl+C, Ctrl+V, then magic happens.</p>
 
-<div id = 'main-buttons'>
-    <button class = 'buttons' onclick = 'window.location.href="https://t.me/kxstxn"'>Telegram</button>
-    <button class = 'buttons' onclick = 'window.location.href="https://github.com/kxstxn"'>Github</button>
+<div id="main-buttons">
+    <button class="buttons" data-i18n="main.telegram" onclick="window.location.href='https://t.me/kxstxn'">Telegram</button>
+    <button class="buttons" data-i18n="main.github" onclick="window.location.href='https://github.com/kxstxn'">Github</button>
 </div>
 
 </div>
-    
+
+<script src="i18n.js"></script>
 </body>
 </html>

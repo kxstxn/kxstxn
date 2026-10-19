@@ -3,19 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
+    <title>Services — kxstxn</title>
+    <link rel="stylesheet" href="background.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-i18n-title="title.services">
+<div class="container">
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+</div>
 
     <div class="navbar">
-        <a href="services.html">Services</a>
-        <a href="tools.html">Tools</a>
-        <a href="projects.html">Projects</a>
-        <a href="about.html">About</a>
+        <a href="main.html" data-i18n="nav.home">Home</a>
+        <a href="services.html" data-i18n="nav.services">Services</a>
+        <a href="tools.html" data-i18n="nav.tools">Tools</a>
+        <a href="projects.html" data-i18n="nav.projects">Projects</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" class="lang-btn" data-lang="en">EN</button>
+            <button type="button" class="lang-btn" data-lang="ru">RU</button>
+        </div>
     </div>
-    
-    <p id = 'soon'>Soon...</p>
-    
+
+    <main class="page page-wide">
+        <header class="page-header">
+            <h1 class="page-title" data-i18n="services.title">Services</h1>
+            <p class="page-lead" data-i18n="services.lead">Things I build, fix, and ship. Ctrl+C, Ctrl+V, then magic happens.</p>
+        </header>
+
+        <ul class="cards three-col">
+            <li class="glass card">
+                <span class="card-title" data-i18n="services.web.title">Web development</span>
+                <p class="card-text" data-i18n="services.web.text">Landing pages, personal sites, and small web apps — clean markup, dark UI, no bloat.</p>
+            </li>
+            <li class="glass card">
+                <span class="card-title" data-i18n="services.auto.title">Automation &amp; scripts</span>
+                <p class="card-text" data-i18n="services.auto.text">CLI utilities, bots, and glue code that remove repetitive work from your day.</p>
+            </li>
+            <li class="glass card">
+                <span class="card-title" data-i18n="services.bots.title">Telegram bots</span>
+                <p class="card-text" data-i18n="services.bots.text">Custom bots for notifications, workflows, or small products that live where you already chat.</p>
+            </li>
+        </ul>
+    </main>
+
+<script src="i18n.js"></script>
 </body>
 </html>
